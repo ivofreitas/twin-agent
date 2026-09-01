@@ -1,10 +1,9 @@
-import gradio as gr
-from dotenv import load_dotenv
 from openai import OpenAI
-
 from context import TWIN_SYSTEM_PROMPT
-from styles import EXAMPLES, CSS, JS
-from tools import handle_tool_calls
+from tools import tools, handle_tool_calls
+from styles import CSS, JS, EXAMPLES
+from dotenv import load_dotenv
+import gradio as gr
 
 load_dotenv(override=True)
 

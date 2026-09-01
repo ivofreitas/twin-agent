@@ -1,13 +1,13 @@
 from pypdf import PdfReader
 
-reader = PdfReader("twin/linkedin.pdf")
+reader = PdfReader("linkedin.pdf")
 linkedin = ""
 for page in reader.pages:
     text = page.extract_text()
     if text:
         linkedin += text
 
-with open("twin/summary.txt", "r", encoding="utf-8") as f:
+with open("summary.txt", "r", encoding="utf-8") as f:
     summary = f.read()
 
 TWIN_SYSTEM_PROMPT = f"""
